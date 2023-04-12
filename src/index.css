@@ -4,7 +4,7 @@
       --color-primary-purple: hsl(259, 100%, 65%);
       --color-primary-light-red: hsl(0, 100%, 67%);
       --color-white: hsl(0, 0%, 100%);
-      --color-off-while: hsl(0, 0%, 94%);
+      --color-off-white: hsl(0, 0%, 94%);
       --color-light-gray: hsl(0, 0%, 86%);
       --color-smokey-gray: hsl(0, 1%, 44%);
       --color-off-balck: hsl(0, 0%, 8%);
@@ -24,4 +24,99 @@
       font-size: 1.6rem;
       font-family: 'Poppins', sans-serif;
       line-height: 1.5;
+      background-color: var(--color-light-gray);
+  }
+
+
+  .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  /* durations */
+
+  .duration {
+      font-style: italic;
+      font-weight: 800;
+      color: var(--color-off-balck);
+      font-size: 7rem;
+      margin-top: 0;
+      margin-bottom: 0.2rem;
+      line-height: 1.4;
+  }
+
+  .duration span {
+      margin-right: 1rem;
+      color: var(--color-primary-purple);
+  }
+
+  /* inpput */
+  .input {
+      padding: 1.6rem;
+      outline: 2px solid var(--color-light-gray);
+      border-radius: 5px;
+      border: none;
+      margin-top: 0.75rem;
+  }
+
+  .label {
+      text-transform: uppercase;
+      color: var(--color-smokey-gray);
+      font-size: 1.4rem;
+      display: block;
+  }
+
+  input:active {
+      outline: 2px solid var(--color-primary-purple);
+
+  }
+
+  input::placeholder,
+  input[type="text"] {
+      color: var(--color-off-balck);
+      font-size: 2.4rem;
+  }
+
+
+
+  /* card */
+  .card {
+      padding: 4rem 5rem;
+      width: 75rem;
+      background-color: var(--color-white);
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 150px;
+
+  }
+
+  .input-container {
+      display: flex;
+      column-gap: 3rem;
+  }
+
+  /* button */
+  .btn {
+      cursor: pointer;
+      padding: 1.6rem;
+      border-radius: 100%;
+  }
+
+  .btn-primary {
+      background-color: var(--color-off-balck);
+
+  }
+
+  /* divider */
+  .divider {
+      display: flex;
+      align-items: center;
+  }
+
+  .divider hr {
+      width: 100%;
+      border: 1px solid var(--color-light-gray);
   }
