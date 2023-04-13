@@ -1,8 +1,8 @@
 import React from "react";
 import { arrow } from "../assets";
-function Button({ onClick }) {
+function Button({ onClick, ...otherProps }) {
   return (
-    <button className="btn btn-primary" onClick={onClick}>
+    <button className="btn btn-primary" onClick={onClick} {...otherProps}>
       <img src={arrow} alt="calculate duration" />
     </button>
   );

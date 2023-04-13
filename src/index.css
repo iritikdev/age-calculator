@@ -53,7 +53,7 @@
   }
 
   /* inpput */
-  .input {
+  input {
       padding: 1.6rem;
       outline: 2px solid var(--color-light-gray);
       border-radius: 5px;
@@ -77,6 +77,15 @@
   input[type="text"] {
       color: var(--color-off-balck);
       font-size: 2.4rem;
+  }
+
+  .error {
+      font-size: 1.2rem;
+      color: var(--color-primary-light-red);
+      font-weight: 400;
+      font-style: italic;
+      margin-top: 0.8rem;
+      margin-bottom: -1rem;
   }
 
 

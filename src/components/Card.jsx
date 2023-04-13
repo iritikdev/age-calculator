@@ -1,20 +1,15 @@
-import React from "react";
-import Input from "./Input";
 import Duration from "./Duration";
-import Button from "./Button";
-import Divider from "./Divider";
+import DateForm from "./DateForm";
+import { useState } from "react";
+
 function Card(props) {
+  const [duration, setDuration] = useState({});
   return (
     <div className="card">
-      <div className="input-container">
-        <Input placeholder="DD" label="day" />
-        <Input placeholder="MM" label="month" />
-        <Input placeholder="YY" label="year" />
-      </div>
-      <Divider />
-      <Duration number={38}>years</Duration>
-      <Duration number={5}>months</Duration>
-      <Duration number={26}>days</Duration>
+      <DateForm setDuration={setDuration} />
+      <Duration number={duration.years}>years</Duration>
+      <Duration number={duration.months}>months</Duration>
+      <Duration number={duration.days}>days</Duration>
     </div>
   );
 }
