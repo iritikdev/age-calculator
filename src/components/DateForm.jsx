@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Button from "./Button";
+import getDateDifference from "../utils/getDateDifference";
 
 function DateForm({ setDuration }) {
   const [date, setDate] = useState({ day: "", month: "", year: "" });
@@ -22,13 +23,6 @@ function DateForm({ setDuration }) {
     return Object.keys(currentErrors).length === 0 ? null : currentErrors;
   };
 
-  const getFormatedStringFromDays = (numberOfDays) => {
-    const years = Math.floor(numberOfDays / 365);
-    const months = Math.floor((numberOfDays % 365) / 30);
-    const days = Math.floor((numberOfDays % 365) % 30);
-
-    return { years, months, days };
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -36,13 +30,13 @@ function DateForm({ setDuration }) {
     setErrors(currentErrors);
     if (currentErrors) return;
 
-    const date1 = new Date();
-    const date2 = new Date(date.year, date.month - 1, date.day);
-    const diffTime = Math.abs(date2 - date1);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    const current = getFormatedStringFromDays(diffDays);
+    // const date1 = new Date();
+    // const date2 = new Date(date.year, date.month - 1, date.day);
+    // const diffTime = Math.abs(date2 - date1);
+    // const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    // const current = getFormatedStringFromDays(diffDays);
 
-    setDuration(current);
+    setDuration(getDateDifference(date));
   };
 
   const validateProperty = ({ name, value }) => {

@@ -112,10 +112,11 @@
       cursor: pointer;
       padding: 1.6rem;
       border-radius: 100%;
+      border: none;
   }
 
   .btn-primary {
-      background-color: var(--color-off-balck);
+      background-color: var(--color-primary-purple);
 
   }
 
