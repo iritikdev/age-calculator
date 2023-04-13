@@ -30,12 +30,6 @@ function DateForm({ setDuration }) {
     setErrors(currentErrors);
     if (currentErrors) return;
 
-    // const date1 = new Date();
-    // const date2 = new Date(date.year, date.month - 1, date.day);
-    // const diffTime = Math.abs(date2 - date1);
-    // const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    // const current = getFormatedStringFromDays(diffDays);
-
     setDuration(getDateDifference(date));
   };
 
@@ -82,7 +76,6 @@ function DateForm({ setDuration }) {
             name="day"
             onChange={handleChange}
             placeholder="DD"
-            size={4}
             type="text"
             value={date.day}
           />
@@ -96,7 +89,6 @@ function DateForm({ setDuration }) {
             name="month"
             onChange={handleChange}
             placeholder={"MM"}
-            size={4}
             type="text"
             value={date.month}
           />
@@ -107,7 +99,6 @@ function DateForm({ setDuration }) {
             year
           </label>
           <input
-            size={4}
             name="year"
             type="text"
             placeholder={"YY"}
